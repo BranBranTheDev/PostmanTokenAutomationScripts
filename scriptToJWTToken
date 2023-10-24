@@ -1,0 +1,22 @@
+const convertedToken = pm.response.text(); //saved converted JWT token to a const
+
+postman.setEnvironmentVariable('JWTToken', convertedToken); //sets cont value to a Global variable in Postman called JWTToken
+
+//tests to validate token values 
+pm.test('Response status code is 200', function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Verify response body contains a valid JWT token", function () {
+    const responseData = pm.response.text();
+
+    pm.expect(responseData).to.be.a('string');
+});
+
+pm.test("Verify convertedToken value matches with JWT value received", ()=> {
+    const jwtOutput = pm.response.text();
+    const testToken = pm.response.text();
+    pm.expect(testToken).to.contain(jwtOutput);
+    console.log(jwtOutput);
+    console.log(testToken);
+});
