@@ -3,11 +3,9 @@ Automate bearer token management in Postman for streamlined API calls. Simplify 
 
 # Scripts Included:
 
-generate-token.js: This script allows you to generate new bearer tokens with specific access permissions for your APIs. It automates the token creation process, reducing the need for manual token management.
+bearerTokenScript: This script allows you to generate new bearer tokens with specific access permissions for your APIs. It automates the token creation process, by saving your API's login access token from the Cookies, and saving it to a Global variable in Postman to be reused. Reducing the need for manual token management.
 
-refresh-token.js: When your tokens expire, this script automates the token refresh process, ensuring continuous access to your APIs without interruptions.
-
-revoke-token.js: Should the need arise, this script provides a straightforward method for revoking tokens and enhancing security by terminating unauthorized access.
+scriptToJWTToken: This script helps you to convert the token value from bearerTokeScript, to a JWT token.
 
 # How to Use:
 
