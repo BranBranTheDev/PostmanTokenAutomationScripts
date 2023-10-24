@@ -1,0 +1,5 @@
+//saves bear_token to const
+const bearTokenValue = JSON.parse(pm.cookies.get("CVBearToken")).bear_token;
+
+//Save the bear_token value as a global variable
+pm.globals.set("MyBearToken", bearTokenValue);
